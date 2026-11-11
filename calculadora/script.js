@@ -10,8 +10,12 @@ function calculadora(num1, operator, num2) {
             return 'Valores inválidos'
     };
     if (typeof num1 !== 'number' || typeof num2 !== 'number') {
-        return 'Valores inválidos'
-    };
+        return 'Valores inválidos';
+    }
+    if (Number.isNaN(num1) || Number.isNaN(num2) ||
+        typeof operator !== 'string') {
+            return 'Valores inválidos';
+    }
     if (operator === '+') {
         return num1 + num2;
     };
